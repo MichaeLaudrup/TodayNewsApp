@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web: 
+    container_name: nutreme_app_backend
+    restart: always
+    build: .
+    ports: 
+      - "8000:3000"
+    volumes:
+      - .:/usr/src/app

@@ -4,8 +4,16 @@
   "description": "Back-end de API que recibe noticias",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./src/app.js"
   },
   "author": "Michael Laudrup",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
