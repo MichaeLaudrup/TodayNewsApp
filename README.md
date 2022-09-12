@@ -15,4 +15,5 @@
     <h3>FRONT_END</h3>
     <li>Tener instalada ultima versión de Angular-cli y de nodejs</li>
     <li>Ejecutar el comando "ng serve" en el directorio raiz de la carpeta "today-news-front</li>
+     <li>Tener instalado un plug-in en el navegador que permita llamada cors</li>
 </ol>
