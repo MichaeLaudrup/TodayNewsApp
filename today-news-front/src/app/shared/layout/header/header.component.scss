@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    background-color: var(--elements-background);
+    height: 60px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav__list{
+    display: flex;
+    align-items: center;
+    &-item{
+        font-size: 1.25rem;
+        font-variant: small-caps;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        transition: all .7s ease-in-out; 
+        padding: 1rem 2rem;
+
+        &:hover {
+            background-color: var(--color-8);
+            a, a:visited {
+                color: var(--text-color-dark); 
+            }
+        }
+    }
+}

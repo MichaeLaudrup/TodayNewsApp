@@ -1,0 +1,25 @@
+
+<div class="actions">
+    <button 
+        (click)="addNewMode = true"
+        class="btn btn-with-icon"><span class="material-icons-outlined">
+        add
+        </span>Añadir noticia
+    </button>
+    <button 
+        (click)="conmuteListOfNewShowed()"
+        class="btn btn-with-icon">
+        <span class="material-icons-outlined">
+            {{ archivedNewsListMode ? 'format_list_bulleted': 'inventory_2'}}
+        </span>Ver noticias {{archivedNewsListMode ? ' sin archivar': ' archivadas'}}
+    </button>
+</div>
+<ul class="news-list">
+    <ng-container *ngFor="let newArticle of listNews">
+        <new-list-item [newArticle]="newArticle" (deletedClicked)="deleteItem($event)" (archivedClicked)="archiveNew($event)" ></new-list-item>
+    </ng-container>
+</ul>
+
+<ng-container *ngIf="addNewMode">
+    <add-new (formClosed)="processData($event)"></add-new>
+</ng-container>

@@ -1,0 +1,21 @@
+
+:host {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; 
+}
+
+.news-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 900px;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem; 
+}

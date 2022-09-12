@@ -1,0 +1,30 @@
+<div class="new-item__container">
+    <div class="new-item__img" [style.backgroundImage]="'url('+ urlBase+newArticle.imgFileName + ')'">
+    </div>
+    <div class="new-item__content">
+        <div class="new-item__header">
+            <div class="new-item__header-title">
+                {{ newArticle.title}}
+            </div>
+            <div class="new-item__header-content">
+                <div class="new-item__header-date">
+                    {{ newArticle.createAt  | date }}
+                </div>
+                <div class="new-item__header-actions">
+                    <span class="material-icons-outlined action-button" (click)="archivedItem()">
+                        archive
+                    </span>
+                    <span class="material-icons-outlined action-button trash" (click)="deleteItem()">
+                        delete_forever
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="new-item__description">
+            {{ newArticle.description}}
+        </div>
+        <div class="new-item__article-content">
+            {{ newArticle.content}}
+        </div>
+    </div>
+</div>

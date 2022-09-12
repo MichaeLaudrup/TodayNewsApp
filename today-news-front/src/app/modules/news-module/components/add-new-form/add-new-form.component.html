@@ -1,0 +1,14 @@
+<form class="add-new-form" [formGroup]="newForm" (ngSubmit)="addNew()">
+    <div class="form-inputs">
+        <text-input [form-group]="newForm" controlName="title" labelText="Titulo de noticia"></text-input>
+        <text-area labelText="Descripcion" [form-group]="newForm" control-name="description"></text-area>
+        <text-area labelText="Contenido" [form-group]="newForm" control-name="content"></text-area>
+        <input type="file" (change)="onFileChange($event)">
+    </div>
+
+    <button class="btn" type="submit" [disabled]="">Añadir Noticia</button>
+
+    <div class="close" (click)="formClosed(false)">
+        X
+    </div>
+</form>

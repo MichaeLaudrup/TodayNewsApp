@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'material-icons/iconfont/material-icons.css'; 
+
+*, *::after, *::before {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, a:visited {
+    transition: all .7s ease-in-out;
+    text-decoration: none;
+    color: var(--color-9); 
+}
+
+ul{
+    list-style: none;
+}
+
+html, body {
+    color: var(--color-9); 
+}
+
+.btn {
+    padding: .75rem 2rem; 
+    background-color: var(--color-2);
+    border:none; 
+    color: var(--text-color); 
+    font-family: inherit;
+    border: none;
+    transition: all .7s ease-in-out;
+    &:hover{
+        transform: translateY(-10px);
+    }
+    &:active{
+        transition: all .2s ease-in-out;
+        transform: translateY(5px);
+    }
+}
+
+.btn-with-icon{
+    display: flex;
+    align-items: center;
+    gap: .5rem; 
+    border-radius: var(--border-radius);
+    
+}
+
+
+
+
+/* GLOBAL-STYLE-VARIABLE */
+
+:root{
+
+    --color-1: #03045E;
+    --color-2: #023E8A;
+    --color-3: #0077B6;
+    --color-4: #0096C7;
+    --color-5: #00B4D8; 
+    --color-6: #48CAE4;
+    --color-7: #90E0EF;
+    --color-8: #ADE8F4; 
+    --color-9: #CAF0F8;
+
+
+    --text-color: var(--color-9); 
+    --text-color-dark: var(--color-1); 
+
+
+    --border-radius: 5px;
+    --elements-background: var(--color-3) 
+}

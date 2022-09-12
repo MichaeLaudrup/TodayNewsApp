@@ -1,0 +1,12 @@
+<nav class="header-nav">
+    <div class="brand">
+        <h1>Today's News</h1>
+    </div>
+    <ul class="header-nav__list">
+        <ng-container *ngFor="let headerProperty of headerProperties">
+            <li class="header-nav__list-item">
+                <a [routerLink]="headerProperty.url">{{ headerProperty.title }}</a>
+            </li>
+        </ng-container>
+    </ul>
+</nav>
