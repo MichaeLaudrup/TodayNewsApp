@@ -1,27 +1,13 @@
-import { query, stagger, style, transition, trigger, animate } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { newService } from 'src/app/core/services/news.service';
+import { listAnimation } from 'src/app/shared/animations/shared.animations';
 import { NewModel } from 'src/app/shared/model/new.model';
 
 @Component({
   selector: 'news-list',
   templateUrl: './news-list.component.html',
   styleUrls: ['./news-list.component.scss'],
-  animations: [trigger('list-items-animation', [
-    transition('* <=> *', query(':enter', [
-      style({
-        opacity: 0,
-        transform: 'translateX(-100%)'
-      }),
-      stagger(400, [
-        animate('.7s ease-in-out', style({
-          opacity: 1,
-          transform: 'translateX(0%)'
-        }))
-      ])
-
-    ], {optional: true}))
-  ] )]
+  animations: [ listAnimation]
 })
 export class NewsListComponent implements OnInit {
   listNews: NewModel[] = []; 
