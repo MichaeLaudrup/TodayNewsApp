@@ -1,4 +1,4 @@
-
+/* MIDDLE WARE ENCARGADO DE LA CAPTACION DE IMAGENES AL SUBIRSE DESDE FRONT */
 const multer = require('multer'); 
 
 const multerStorage = multer.diskStorage({
