@@ -15,3 +15,7 @@
     <li>Tener instalada ultima versión de Angular-cli y de nodejs</li>
     <li>Ejecutar el comando "ng serve" en el directorio raiz de la carpeta "today-news-front</li>
 </ol>
+    <li>Abrir carpeta today-news-back y desde la raiz ejecutar el comando "docker-compose up" y posteriormente "docker-compose up</li>
+    <li></li>
+
+</ol>
