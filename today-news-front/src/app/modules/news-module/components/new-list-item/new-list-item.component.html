@@ -8,7 +8,10 @@
             </div>
             <div class="new-item__header-content">
                 <div class="new-item__header-date">
-                    {{ newArticle.createAt  | date }}
+                    <span>Creation Date: {{ newArticle.createAt  | date }}</span>
+                    <ng-container *ngIf="unarchivedMode">
+                        <span>Archived Date: {{ newArticle.archiveAt  | date }} </span>
+                    </ng-container>
                 </div>
                 <div class="new-item__header-actions">
                     <span class="material-icons-outlined action-button" (click)="archivedItem()">

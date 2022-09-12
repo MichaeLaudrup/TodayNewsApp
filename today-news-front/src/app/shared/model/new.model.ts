@@ -6,5 +6,6 @@ export interface NewModel {
     imgFileName: string,
     archiveDate: Date, 
     author: string,
-    createAt: Date
+    createAt: Date,
+    archiveAt?: Date
 }

@@ -32,7 +32,21 @@ export class newService {
     }
 
     public archiveNew(id:string): Observable<any>{
-      return this.http.put(`${environment.baseURL}/news/${id}`, {archivedAt: new Date().toISOString}).pipe(map( (jsendResponse:{status:String, data: {newArchived: NewModel}}) => {
+      const body = {
+        archiveDate : new Date()
+      }
+      console.log(body)
+      return this.http.put(`${environment.baseURL}/news/${id}`, body).pipe(map( (jsendResponse:{status:String, data: {newArchived: NewModel}}) => {
+        return jsendResponse.data.newArchived; 
+      }))
+    }
+
+
+    public unarchiveNew(id:string): Observable<any>{
+      const body = {
+        archiveDate : undefined
+      }
+      return this.http.put(`${environment.baseURL}/news/${id}`, body).pipe(map( (jsendResponse:{status:String, data: {newArchived: NewModel}}) => {
         return jsendResponse.data.newArchived; 
       }))
     }

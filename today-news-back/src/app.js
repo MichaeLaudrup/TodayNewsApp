@@ -16,12 +16,13 @@ const newsRouter = require('./routes/news.routes');
 app.use(express.json()); 
 app.use('/api/v1/news', newsRouter); 
 
+/* Rutas no especificadas */
 app.use('*', (req, res, next) => {
     next(new Error('Ruta no soportada por este servidor...'))
 }) 
 
 
-/* Error*/
+/* Procesamiento de Error*/
 const processErrorMiddleware = require('./middleware/error.middleware').processError
 app.use(processErrorMiddleware)
 

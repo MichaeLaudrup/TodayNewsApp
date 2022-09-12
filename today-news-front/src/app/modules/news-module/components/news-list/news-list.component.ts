@@ -57,6 +57,12 @@ export class NewsListComponent implements OnInit {
     this.archivedNewsListMode = !this.archivedNewsListMode; 
     this.updateNews(); 
   }
+
+  unarchiveNew(id:string){
+    this.newService.unarchiveNew(id).subscribe(_ => {
+      this.updateNews(); 
+    })
+  }
 }
 
 
