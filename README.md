@@ -10,12 +10,9 @@
 <hr>
 <h3>CONTRATOS FRONT-END - BACK-END</h3>
 <p>La colección de llamadas se puede obtener en la carpeta contratos front-back</p>
+<hr>
 <ol>
     <h3>FRONT_END</h3>
     <li>Tener instalada ultima versión de Angular-cli y de nodejs</li>
     <li>Ejecutar el comando "ng serve" en el directorio raiz de la carpeta "today-news-front</li>
-</ol>
-    <li>Abrir carpeta today-news-back y desde la raiz ejecutar el comando "docker-compose up" y posteriormente "docker-compose up</li>
-    <li></li>
-
 </ol>
