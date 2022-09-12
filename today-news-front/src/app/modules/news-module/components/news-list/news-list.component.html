@@ -14,9 +14,9 @@
         </span>Ver noticias {{archivedNewsListMode ? ' sin archivar': ' archivadas'}}
     </button>
 </div>
-<ul class="news-list">
+<ul class="news-list" [@list-items-animation]="listNews.length">
     <ng-container *ngFor="let newArticle of listNews">
-        <new-list-item [newArticle]="newArticle" (deletedClicked)="deleteItem($event)" (archivedClicked)="archiveNew($event)" ></new-list-item>
+        <new-list-item [newArticle]="newArticle" (deletedClicked)="deleteItem($event)" (archivedClicked)="archiveNew($event)" [unarchivedMode]="archivedNewsListMode"></new-list-item>
     </ng-container>
 </ul>
 

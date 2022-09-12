@@ -10,21 +10,19 @@ import { AddNewFormComponent } from './components/add-new-form/add-new-form.comp
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     NewsListComponent,
     NewsLayoutComponent,
     ArchivedNewsListComponent,
     NewListItemComponent,
-    AddNewFormComponent
+    AddNewFormComponent,
   ],
   imports: [
     CommonModule,
     NewsRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
 })
 export class NewsModule { }

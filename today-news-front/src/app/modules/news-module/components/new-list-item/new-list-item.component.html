@@ -12,7 +12,7 @@
                 </div>
                 <div class="new-item__header-actions">
                     <span class="material-icons-outlined action-button" (click)="archivedItem()">
-                        archive
+                        {{unarchivedMode ? 'unarchive' : 'archive'}}
                     </span>
                     <span class="material-icons-outlined action-button trash" (click)="deleteItem()">
                         delete_forever
